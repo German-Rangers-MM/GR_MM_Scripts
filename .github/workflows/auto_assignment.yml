@@ -12,10 +12,11 @@ jobs:
         runs-on: ubuntu-latest
         permissions:
             issues: write
+            pull-requests: write
         steps:
-            - name: 'Auto-assign PR'
+            - name: 'Auto-assign PR and Issues'
               uses: pozil/auto-assign-issue@v2
               with:
-                  repo-token: ${{ secrets.GR_MM_TOKEN }}
+                  repo-token: ${{ secrets.GR_MM_TOKEN_LOCAL }}
                   teams: scripting
                   numOfAssignee: 1
