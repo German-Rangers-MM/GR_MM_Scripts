@@ -16,6 +16,6 @@ jobs:
             - name: 'Auto-assign PR'
               uses: pozil/auto-assign-issue@v2
               with:
-                  repo-token: ${{ secrets.SCRIPTING_TEAM_ASSIGN }}
+                  repo-token: ${{ secrets.GR_MM_TOKEN }}
                   teams: scripting
                   numOfAssignee: 1
