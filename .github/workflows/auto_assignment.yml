@@ -1,0 +1,21 @@
+name: PR and Issue assignment
+
+on:
+    issues:
+      types: [opened]
+
+    pull_request:
+        types: [opened, edited, synchronize, reopened]
+
+jobs:
+    auto-assign:
+        runs-on: ubuntu-latest
+        permissions:
+            issues: write
+        steps:
+            - name: 'Auto-assign PR'
+              uses: pozil/auto-assign-issue@v2
+              with:
+                  repo-token: ${{ secrets.SCRIPTING_TEAM_ASSIGN }}
+                  teams: scripting
+                  numOfAssignee: 1
