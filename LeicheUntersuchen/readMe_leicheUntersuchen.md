@@ -3,3 +3,5 @@
 ## Funktion
 
 Fügt eine ACE-Interaktion an einer Unit hinzu über welche Text im HUD des Spielers angezeigt wird.
+
+Credit: Lightning
