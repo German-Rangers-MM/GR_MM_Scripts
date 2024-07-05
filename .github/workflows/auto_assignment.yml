@@ -20,3 +20,4 @@ jobs:
                   repo-token: ${{ secrets.GR_MM_TOKEN_ORG }}
                   teams: scripting
                   numOfAssignee: 1
+                  allowSelfAssign: true
