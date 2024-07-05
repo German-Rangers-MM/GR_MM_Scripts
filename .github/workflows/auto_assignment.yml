@@ -17,6 +17,6 @@ jobs:
             - name: 'Auto-assign PR and Issues'
               uses: pozil/auto-assign-issue@v2
               with:
-                  repo-token: ${{ secrets.GR_MM_TOKEN_LOCAL }}
+                  repo-token: ${{ secrets.GR_MM_TOKEN_ORG }}
                   teams: scripting
                   numOfAssignee: 1
