@@ -1,7 +1,7 @@
 # Automatik und Freifall Fallschirmscript
 
 ## Installation
-Füg dieses Code-Snippet in deine description.ext in die cfgFunctions class ein:
+- Step 1: Füg dieses Code-Snippet in deine description.ext in die cfgFunctions class ein:
 ```SQF
 class IGC_halo_jump {
     class common {
@@ -13,6 +13,7 @@ class IGC_halo_jump {
     };
 };
 ```
+- Step 2: Kopier den IGC-Ordner in den Missionsordner
 
 ## Nutzung
 Die Function nimmt folgende Parameter an:
