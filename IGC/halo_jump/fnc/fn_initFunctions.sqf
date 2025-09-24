@@ -18,4 +18,5 @@ switch (true) do {
 
 if (_automaticChute) then {
     [_jumpers,_autoOpenHeight] remoteExec ["IGC_halo_jump_fnc_openParachuteRemote",0,false];
+
 };
