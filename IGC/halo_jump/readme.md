@@ -1,5 +1,19 @@
 # Automatik und Freifall Fallschirmscript
 
+## Installation
+Füg dieses Code-Snippet in deine description.ext in die cfgFunctions class ein:
+```SQF
+class IGC_halo_jump {
+    class common {
+        file = "IGC\halo_jump\fnc";
+        class initFunctions {};
+        class jump {};
+        class openParachuteRemote {};
+        class getVehicleCargoMembers {};
+    };
+};
+```
+
 ## Nutzung
 Die Function nimmt folgende Parameter an:
 - _fahrzeug (object)
