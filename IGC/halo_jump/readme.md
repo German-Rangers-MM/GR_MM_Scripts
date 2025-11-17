@@ -32,5 +32,5 @@ Die Function nimmt folgende Parameter an:
   - Freifallsprung mit lenkbaren Schirm 
 
 ### Maximal-Beispiel:
-- [this,true,"CUP_T10_Parachute_backpack",true,600,{hint format["You landed at %1 %2",getPos player select 0,getPos player select 1]}] call IGC_halo_jump_fnc_initFunctions;
-  - Automatiksprung für 600m mit nicht-lenkbaren Schirm und Koordinaten-Ausgabe bei Landung
+- [this,true,"CUP_T10_Parachute_backpack",true,600,0.1,{hint format["You landed at %1 %2",getPos player select 0,getPos player select 1]}] call IGC_halo_jump_fnc_initFunctions;
+  - Automatiksprung für 600m mit nicht-lenkbaren Schirm und Koordinaten-Ausgabe bei Landung und einer 10% Mindest-Chance für Verrutschen des NVGs
