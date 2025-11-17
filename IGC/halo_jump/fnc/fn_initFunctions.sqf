@@ -1,4 +1,4 @@
-params [["_plane",objNull],["_giveParachute",false],["_parachuteClass","B_Parachute"],["_automaticChute",true],["_autoOpenHeight",500],["_onLanding",{}]];
+params [["_plane",objNull],["_giveParachute",false],["_parachuteClass","B_Parachute"],["_automaticChute",true],["_autoOpenHeight",500],["_nvgFailChance",0],["_onLanding",{}]];
 
 if (!local _unit) exitWith {_this remoteExec ["IGC_halo_jump_fnc_initFunctions",2,false]};
 
@@ -17,6 +17,5 @@ switch (true) do {
 
 
 if (_automaticChute) then {
-    [_jumpers,_autoOpenHeight] remoteExec ["IGC_halo_jump_fnc_openParachuteRemote",0,false];
-
+    [_jumpers,_autoOpenHeight,_nvgFailChance] remoteExec ["IGC_halo_jump_fnc_openParachuteRemote",0,false];
 };

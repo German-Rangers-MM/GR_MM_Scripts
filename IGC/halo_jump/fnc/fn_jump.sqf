@@ -8,11 +8,17 @@ if !(player in _jumpers) exitWith {};
 if (_giveParachute) then {
     if (isClass (configFile >> "CfgPatches" >> "bocr_main")) then {
         if (backpack player isNotEqualTo _parachuteClass) then {
-            [player] call zade_boc_fnc_actionOnChest;
+            if ([player] call zade_boc_fnc_chestpack == "") then {
+                [player] call zade_boc_fnc_actionOnChest;
+            } else {
+                if (backpack player isNotEqualTo "" && [player] call zade_boc_fnc_chestpack == _parachuteClass) then {
+                    [player] call zade_boc_fnc_actionSwap;
+                };
+            };
         };
     };
 
-    removeBackpack player;
+    removeBackpackGlobal player;
     player addBackpackGlobal _parachuteClass;
 };
 
@@ -24,6 +30,13 @@ if (sunOrMoon < 0.3) then {
     if ("ACE_IR_Strobe_Item" in (items player)) then {
         [player, player, ["ACE_IR_Strobe_Item"]] call ace_attach_fnc_attach;
     };
+    if (hmd player != "" && currentVisionMode player == 0) then {
+        player action ["NvGoggles", player];
+    };
+};
+
+if ("ACE_Altimeter" in assignedItems player) then {
+    [player] call ACE_Parachute_fnc_showAltimeter;
 };
 
 player allowdamage false;
