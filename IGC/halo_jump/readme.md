@@ -22,6 +22,7 @@ Die Function nimmt folgende Parameter an:
 - _fallschirmClass (string(classname), default: "B_Parachute") (optional)
 - _automatikSprung (bool, default: true) (optional)
 - _automatikSprungHöhe (num, default: 500)  (optional)
+- _nvgFailChance (num, default: 0) (optional)
 - _onLandingCode (code, default {}) (optional)
 
 ### Minimal-Beispiele:
